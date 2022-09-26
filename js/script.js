@@ -21,8 +21,8 @@ var hr_rotation = 30 * hr + min / 2;
 
 // Déplacer les aiguilles
 function demarrerLaMontre() {
-  hr_rotation += 30 / (3600 + min + sec);
-  min_rotation += 6 / (60 + sec );
+  hr_rotation += 30 / (3600 + min * 60 + sec);
+  min_rotation += 6 / (60 + sec);
   sec_rotation += 6;
   AIGUILLEHR.style.transform = `rotate(${hr_rotation}deg)`;
   AIGUILLEMIN.style.transform = `rotate(${min_rotation}deg)`;
